@@ -1,0 +1,32 @@
+<h1>Template Driven Form</h1>
+
+
+<form #login="ngForm" (ngSubmit)="submit(login.value)">
+  Username
+  <input type="text" name="username" ngModel>
+  <br>
+  <br>
+  Password
+  <input type="text" name="password" ngModel>
+  <br>
+  <br>
+  <input type="submit" value="save">
+</form>
+
+
+
+<hr>
+
+<h1>Reactive Forms(Model Driven Forms)</h1>
+
+<form [formGroup]="formdata" (ngSubmit)="submit(formdata.value)" >
+Username
+<input type="text" name="username" formControlName="username" >
+<br>
+<br>
+Password
+<input type="password" name="password" formControlName="password" >
+<br>
+<br>
+<input type="submit" value="Save">
+</form>
